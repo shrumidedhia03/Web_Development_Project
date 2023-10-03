@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet"
+  href="Slideshow.css">
+  <title>Types of Acne and its Treatment</title>
+   <div class="topnav">
+      <a href="Glimmer N Glow.html">Home</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="SIGNUP2.html">Signup</a> 
+      <a href="login.html">Products</a>
+      <a class="active" href="Home Remedies.html">Home Remedies</a> 
+      <a href="contactus.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+</div>
+  <style>
+    /* th, td, p, input, h3 {
+            font:15px 'Ubuntu';
+            padding: 1px 5px;
+        } */
+ body {
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+    table,
+    th,
+    td {
+      border: 3.5px solid #e75480;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 100px;
+      /* margin-right: -50px; */
+      margin: auto;
+      border: 10;
+      /* width: 100%; */
+      border-collapse: collapse;
+    }
+
+    td {
+      text-align: left;
+      font-size: 20px;
+      font-weight: normal;
+      letter-spacing: 0.06rem;
+    }
+
+    th {
+      text-align: left;
+      font-weight: bold;
+      letter-spacing: 0.09rem;
+      font-size: 24px;
+      border: 10;
+    }
+
+    /* th {
+            font-weight:bold;
+        } */
+    .footer-btn {
+      width: 200px;
+      padding: 10px 10px;
+      font-size: 16px;
+      color: #e75480;
+      /* border: none; */
+      /* border-radius: 30px;  */
+      border: 3px solid pink;
+      font-weight: 700;
+      outline: none;
+      border-radius: 30px;
+      /* margin-left: 20px; */
+      /* margin-right: -20px; */
+      cursor: pointer;
+      transition: opacity .3s linear;
+      font-size: 16px;
+    }
+
+    .footer-btn:hover {
+      opacity: .7;
+    }
+
+    @media screen and (max-width:960px){
+      table,td,th{
+        width: 100%;
+        /* font-size: 100rem; */
+      }
+
+      h2{
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width:600px){
+      h2{
+          text-align: center;
+          width: 100%;
+      }
+      table,td,th,tr {
+        width: 100%;
+        font-size: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+<body style="background-color: #f0fff0;">
+  <h2 style=" background: #e75480; text-transform: uppercase; color: white; padding: 15px; text-align: center; letter-spacing: 0.2rem;">Check the type of Acne you  got</h2>
+  <!-- <img src="./symp2.jpeg" alt="Symptoms" width="100%" height="400"> -->
+  <!-- <img src="https://blog-assets.freshworks.com/freshdesk/wp-content/uploads/2018/11/How_to_apologize_to_customers.png" class="responsive"> -->
+  <p style="text-align: left; font-size: 20px; letter-spacing: 0.1rem; line-height: 25px; font-weight: normal;">
+    Got Acne Problems, but don't know what type is it? 
+  </p>
+  <input class="footer-btn" type='button' onclick='tableFromJson()' value='Check your type' />
+
+  <p id='showData'></p>
+
+  <p id='msg'></p>
+</body>
+
+<script>
+  // scroll down for ES6 features.
+
+  // using regular methods.
+
+  function tableFromJson() {
+    // the json data. (you can change the values for output.)
+    var acne = [{
+        'No.': '1',
+        'Type': 'Blackheads',
+        'Description': 'Blackheads clogged follicles that appear as dark bumps on your skin. When too much of facial oil is produced, it clogs pores in your skin causing blackheads',
+        'Cure': 'Salicylic Acid, Retinoid Creams and Lotions'
+      },
+      {
+        'No.': '2',
+        'Type': 'Whiteheads',
+        'Description': 'Whiteheads usually appear small and white bumps on the surface of your skin. It usually occurs when your skin’s pores get clogged with sebum, dirt and dead skin cells.',
+        'Cure': 'Tea Tree Oil, Vitamin A Cream, Witch Hazel'
+      },
+      {
+        'No.': '3',
+        'Type': 'Papules',
+        'Description': 'It refers to an area affected by abnormal skin tissue that has distinct borders and can appear in different shapes and sizes. Papules are also called skin lesions because they can change their colour and texture of your skin.',
+        'Cure': 'Application of Sunscreen and re-apply every two hours, Moisturize daily'
+      },
+      {
+        'No.': '4',
+        'Type': 'Pustules',
+        'Description': 'Pustules are pus-filled inflamed lesions that usually appear white or yellow in colour almost similar to that of pimples and this can cause acne scars that might be permanent.',
+        'Cure': 'Use over-the-counter acne treatments, Limit Sun Exposure and Makeup'
+      },
+      {
+        'No.': '5',
+        'Type': 'Nodules',
+        'Description': 'Nodules are a very severe form of pimples that develop under the skin and a gentle touch can cause breathe holding pain',
+        'Cure': 'Dermatologist recommended'
+      },
+
+      {
+        'No.': '6',
+        'Type': 'Cysts',
+        'Description': 'A cyst is a severe form of acne where skin pores get blocked leading to infection and inflammation in the skin. This condition usually affects the face and upper trunk and arms especially',
+        'Cure': 'Simple heat, Apple cider vinegar'
+      },
+      
+    ]
+
+    // Extract value from table header.
+
+    var col = [];
+    for (var i = 0; i < acne.length; i++) {
+      for (var key in acne[i]) {
+        if (col.indexOf(key) === -1) {
+          col.push(key);
+        }
+      }
+    }
+
+    // Create a table.
+    var table = document.createElement("table");
+
+    // Create table header row using the extracted headers above.
+    var tr = table.insertRow(-1); // table row.
+
+    for (var i = 0; i < col.length; i++) {
+      var th = document.createElement("th"); // table header.
+      th.innerHTML = col[i];
+      tr.appendChild(th);
+    }
+
+    // add json data to the table as rows.
+    for (var i = 0; i < acne.length; i++) {
+
+      tr = table.insertRow(-1);
+
+      for (var j = 0; j < col.length; j++) {
+        var tabCell = tr.insertCell(-1);
+        tabCell.innerHTML = acne[i][col[j]];
+      }
+    }
+
+    // Now, add the newly created table with json data, to a container.
+    var divShowData = document.getElementById('showData');
+    divShowData.innerHTML = "";
+    divShowData.appendChild(table);
+
+  }
+</script>
+
+</html>

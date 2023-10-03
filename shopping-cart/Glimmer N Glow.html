@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet"
+	href="Slideshow.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="logo">
+	<img src="logo.png">
+</div>
+	<div class="topnav">
+      <a class="active" href="http://localhost/Glimmer%20N%20Glow.html">Home</a>
+      <a href="http://localhost/aboutus.html">About Us</a>
+      <a href="http://localhost/signup2.html">Signup</a> 
+      <a href="http://localhost/login.html">Products</a>
+      <a href="http://localhost/Home%20Remedies.html">Home Remedies</a> 
+      <a href="http://localhost/contactus.html">Contact</a>
+      <a href="http://localhost/feedback.html">Feedback</a>
+  </div>
+<br>
+<div class="marquee">
+<marquee> Shop all your favourite products! We are now delivering for FREE in the red,green and orange zones.Delivery to containment zones will remain halted until further updates. </marquee> 
+</div>
+<br>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="ss1.jpg" style= "width:100%" height="500">
+    <div class="text">Our Products</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="ss4.png" style="width:100%" height="500">
+    <div class="text">Lotions and Facewash</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="ss5.png" style="width:100%" height="500">
+    <div class="text">Healthy Skin</div>
+  </div>
+
+   <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="ss6.png" style="width:100%" height="500">
+    <div class="text">Skin Care Routine</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="ss7.png" style="width:100%" height="500">
+    <div class="text">Home Remedies</div>
+  </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+            <h2 style="text-align: center;"><strong><em>TODAY'S DEAL</em></strong></h2>
+            <h3 style="text-align: center;"><strong><em>FLAT 50% OFF ON OUR BEST SELLERS</em></strong></h3>
+            <div class="row">
+                <div class="col-4">
+                    <img src="product1.webp">
+                    <p>Vitamin C Glow Boosting Moisturiser</p>
+                    <div class="rating">
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p><strong><strike>Rs.795/-</strike> Rs.397/-</strong></p>
+                </div>
+                
+                <div class="col-4">
+                    <img src="product2.webp">
+                    <p>Tea Tree Night Lotion</p>
+                    <div class="rating">
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p><strong><strike>Rs.995/-</strike> Rs.497/-</strong></p>
+                </div>
+                <div class="col-4">
+                    <img src="product3.webp">
+                    <p>Vitamin E Gel Moisture Cream</p>
+                    <div class="rating">
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star-half-o" ></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p><strong><strike>Rs.895/-</strike> Rs.447/-</strong></p>
+                </div>
+               
+            </div>
+ <!--------footer------->
+  <div class="footer">
+    <a href="#">©️ 2020 GLimmer N Glow</a><br><br>
+    <a href="https://www.facebook.com/" class="fa fa-facebook" text-align="right"></a>
+    <a href="https://twitter.com/login?lang=en" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+  </div>
+
+</body>
+</html>

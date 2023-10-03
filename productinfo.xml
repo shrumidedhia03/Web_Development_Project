@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="productinfo.xsl"?>
+<skincare>
+  <heading>Daily Skin Care routine</heading>
+ <product>
+  <name>Serum</name>
+  <Quantity>Pea-size amount</Quantity>
+  <time>A.M. and/or P.M.</time>
+  <protip>Always apply before moisturizer to allow for maximum absorption</protip>
+</product>
+ <product>
+  <name>Instant Wrinkle-Smoother</name>
+  <Quantity>A thin layer on areas like crow's feet and forehead lines</Quantity>
+  <time>A.M.</time>
+  <protip>For best results,use this after serum,but before moisturizer and makeup</protip>
+</product>
+<product>
+  <name>Face Moisturizer with SPF-30</name>
+  <Quantity>A quarter size amount-about a teaspoon</Quantity>
+  <time>A.M.</time>
+  <protip>If you're also applying it to your chest and neck,you'll need about a tablespoon</protip>
+</product>
+<product>
+  <name>Dark Spot-Fading Serum</name>
+  <Quantity>A pea-size amount ,applied all over your face</Quantity>
+  <time>A.M. and/or P.M.</time>
+  <protip>If it contains retinol,don't use a retinol cream or moisturizer over it</protip>
+</product>
+<product>
+  <name>Eye Cream</name>
+  <Quantity>A pea-size amount all around the eye</Quantity>
+  <time>A.M.and/or P.M.</time>
+  <protip>If using it in the morning interferes with your makeup,use it only at night</protip>
+</product>
+<product>
+  <name>Night Cream</name>
+  <Quantity>A pea-size amount,if it has retinol;if not,dime-size</Quantity>
+  <time>P.M.</time>
+  <protip>Allow it to be absorbed into skin for a few minutes before bedtime so it won't come off on your pillowcase</protip>
+</product>
+<product>
+  <name>Anti-Aging Lip Treatment</name>
+  <Quantity>As much as you like</Quantity>
+  <time>A.M. and/or P.M.</time>
+  <protip>Best to use pre-bedtime,since it's better absorbed while you sleep. Can also be used during the day</protip>
+</product>
+<product>
+  <name>At-Home Peel</name>
+  <Quantity>Follow product instructions</Quantity>
+  <time>P.M.</time>
+  <protip>If you're using a retinol night or day cream,skip it the day before,the day of,and the day after a peel</protip>
+</product>
+<product>
+  <name>Body Lotion</name>
+  <Quantity>As much as you like</Quantity>
+  <time>A.M. and/or P.M.</time>
+  <protip>Slather on after toweling off post-shower to help lock in moisture</protip>
+</product>
+</skincare>
